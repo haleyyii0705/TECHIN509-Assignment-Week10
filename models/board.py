@@ -28,14 +28,14 @@ class Board:
         return False
 
     def check_winner(self) -> str:
-          """
-        Check the winner of the current board
+        """
+        Check the winner of the current board.
 
         Returns:
-            str: The winning symbol ('X' or 'O') if there is a winner, else an empty string
+            str: The winning symbol ('X' or 'O') if there is a winner, else an empty string.
         """
-          # Check rows
-        for row in Self.board:
+        # Check rows
+        for row in self.board:
             if row[0] == row[1] == row[2] and row[0] != " ":
                 return row[0]
 
@@ -50,6 +50,8 @@ class Board:
 
         if self.board[0][2] == self.board[1][1] == self.board[2][0] and self.board[0][2] != " ":
             return self.board[0][2]
+
+        # No winner
         return None
 
     def is_full(self) -> bool:
