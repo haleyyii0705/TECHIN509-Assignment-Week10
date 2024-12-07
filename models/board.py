@@ -10,8 +10,8 @@ class Board:
         Draw the board of Tic-Tac-Toe game
         """
         for row in self.board:
-        print(" | ".join(row))
-        print("-" * 5)
+            print(" | ".join(row))
+            print("-" * 5)
 
     def update_board(self, row: int, col: int, symbol: str) -> bool:
         """
